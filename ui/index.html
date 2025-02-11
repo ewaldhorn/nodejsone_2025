@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desktop App UI</title>
+    <link href="./styles.css" inline="true" />
+  </head>
+  <body>
+    <h1>Go Desktop App Demo</h1>
+    <hr />
+    <div class="container">
+      <div class="menu">
+        <ul>
+          <li>
+            <button id="increment"><span>Count me</span></button>
+          </li>
+          <li>
+            <button id="callbackButton"><span>Try me</span></button>
+          </li>
+          <li>
+            <button id="populateTableButton"><span>Load Table</span></button>
+          </li>
+          <hr />
+          <li>
+            <button id="requestGCButton"><span>Request GC</span></button>
+          </li>
+          <li>
+            <button id="quitButton" onclick="window.quit()">
+              <span>Quit App</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="display-area">
+        <br />
+        <div>You clicked <span id="count">0</span> time(s) so far.</div>
+        <br />
+        <hr />
+        <br />
+        <h3 style="width: 100%; text-align: center">Some Random Chart</h3>
+        <div id="chart-container">
+          <canvas id="chart" width="800" height="600"></canvas>
+        </div>
+        <br />
+        <hr />
+        <br />
+        <div id="peopleTable"></div>
+        <br />
+        <hr />
+        <footer>
+          <div id="runtimeInformation">...Runtime Information...</div>
+          <br /><br />
+        </footer>
+      </div>
+    </div>
+    <script src="./index.js" inline="true" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<table class="people">
+  <tr>
+    <th>Entry</th>
+    <th>Name</th>
+    <th>Surname</th>
+    <th>Age</th>
+  </tr>
+  {{ range . }}
+  <tr>
+    <td>{{ .Num }}</td>
+    <td>{{ .Name }}</td>
+    <td>{{ .Surname }}</td>
+    <td>{{ .Age }}</td>
+  </tr>
+  {{ end }}
+</table>

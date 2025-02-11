@@ -1,0 +1,156 @@
+/****************************************************** Set up colour scheme */
+:root {
+  --primary-colour: #142734;
+  --secondary-colour: #666666;
+  --background-colour: #1a1a1a;
+  --text-colour: #ffffff;
+  --accent-colour: #183028;
+  --border-colour: #333333;
+  --highlight-colour: #ff9900;
+  --footer-colour: #141414;
+  --dark-border-colour: #333333;
+  --table-background-colour: #666666;
+}
+
+/*************************************** Confgure basic HTML element colours */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-colour);
+  color: var(--text-colour);
+}
+
+header {
+  background-color: var(--primary-colour);
+  color: var(--text-colour);
+}
+
+footer {
+  background-color: var(--footer-colour);
+  color: var(--text-colour);
+  padding: 5px;
+}
+
+/* Container Styles */
+
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh; /* Full height */
+  width: 100vw; /* Full width */
+}
+
+/* Menu Styles */
+
+.menu {
+  background-color: #1b2a34; /* Darker background */
+  width: 250px; /* Fixed width */
+  padding: 10px;
+  border-right: 1px solid #333333; /* Dark border */
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  padding: 10px;
+  border-bottom: 1px solid #333333; /* Dark border */
+}
+
+.menu li:hover {
+  background-color: #2a3d4b; /* Darker hover background */
+}
+
+/* Display Area Styles */
+.display-area {
+  flex-grow: 0.5;
+  padding: 20px;
+  overflow-y: auto; /* Scrollable */
+}
+
+.chart-container {
+  flex-grow: 0.5;
+  overflow-y: auto; /* Scrollable */
+}
+
+button {
+  font-size: larger;
+}
+
+button,
+input[type="button"] {
+  background-color: var(--primary-colour);
+  color: #aeaeae;
+  border: 1px solid var(--border-colour);
+}
+
+button:hover,
+input[type="button"]:hover {
+  background-color: var(--accent-colour);
+  color: var(--text-colour);
+}
+
+.menu button {
+  padding: 8px;
+  margin: 2px;
+  text-align: center;
+  width: 200px;
+  cursor: pointer;
+}
+
+.menu button span {
+  width: 80%;
+  height: 100%;
+  text-align: center;
+}
+
+.menu button span :hover {
+  text-align: start;
+}
+
+/**************************************** Highlight color for selected items */
+.selected {
+  background-color: var(--highlight-colour);
+}
+
+/******************************************************* People table styles */
+table.people {
+  display: block;
+  height: 300px;
+  width: 320px;
+  overflow-x: auto;
+  overflow-y: auto;
+  background: var(--table-background-colour);
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid --var(--border-colour);
+}
+
+table.people tr:nth-child(odd) {
+  color: #ffffff;
+  background-color: #6666aa;
+}
+
+table.people tr:nth-child(even) {
+  color: #ffffff;
+  background-color: #3333aa;
+}
+
+/******************************************** Colour switching button styles */
+.blue {
+  color: white;
+  background: blue;
+}
+
+.orange {
+  color: black;
+  background: #ff9900;
+}
