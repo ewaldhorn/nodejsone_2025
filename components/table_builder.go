@@ -1,7 +1,7 @@
 package components
 
-// Go has great support for templates, so we will use that to build the people table
-// that gets displayed in the UI.
+// Go has great support for templates, so we will use that to build the people
+// table that gets displayed in the UI.
 //
 // The template itself in the /templates/peopleTableTemplate.html file, but
 // for the demo, we embed it in the binary via the embedded_resources.go file.

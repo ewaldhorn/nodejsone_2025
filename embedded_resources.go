@@ -1,7 +1,7 @@
 package main
 
-// We embed all the required resources directly into the binary, making it easier
-// to distribute the application.
+// We embed all the required resources directly into the binary, making it
+// easier to distribute the application.
 
 import (
 	_ "embed"

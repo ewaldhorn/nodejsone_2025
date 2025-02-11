@@ -17,7 +17,8 @@ type RuntimeImformationResult struct {
 }
 
 // ----------------------------------------------------------------------------
-// setupRuntimeInformationCallback binds the getMemoryStats callback to the webview
+// setupRuntimeInformationCallback binds the getMemoryStats callback to
+// the webview.
 // Returns runtime memory information as RuntimeImformationResult including:
 // - Currently allocated memory in MB
 // - Total allocated memory since start in MB

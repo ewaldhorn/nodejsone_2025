@@ -47,7 +47,8 @@ func setupMainView(view webview.WebView) {
 }
 
 // ----------------------------------------------------------------------------
-// the caller can ask for help of version information instead of launching the app
+// the caller can ask for help of version information instead of launching
+// the app
 func hadNoFlags() bool {
 	help := flag.Bool("help", false, "Show help menu")
 	version := flag.Bool("version", false, "Show application version")
