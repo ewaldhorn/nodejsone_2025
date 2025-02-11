@@ -7,6 +7,8 @@ app foundation and presents the UI via a web view component. This allows one to
 access resources in a way that a browser can't, while still retaining the ability
 to use the browser for the UI.
 
+Repo: <https://github.com/ewaldhorn/nodejsone_2025>
+
 ## The problem
 
 In an engineering environment product tests generate hundreds of thousands, if not
