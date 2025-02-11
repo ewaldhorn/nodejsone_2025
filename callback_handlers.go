@@ -47,6 +47,8 @@ func setupJSEvalHandler(w webview.WebView) {
 }
 
 // ----------------------------------------------------------------------------
+// enables the ui to call for the people table to be constructed from the Go
+// side of things
 func setupPopulateTableHandler(w webview.WebView) {
 	w.Bind("populateTable", func() string {
 		return components.BuildPeopleTable(&dataRepo.People, PEOPLE_TEMPLATE)
@@ -54,6 +56,7 @@ func setupPopulateTableHandler(w webview.WebView) {
 }
 
 // ----------------------------------------------------------------------------
+// retrieve the number of elements in the people list
 func setupPeopleCountHandler(w webview.WebView) {
 	w.Bind("getPeopleCount", func() PeopleCountResult {
 		return PeopleCountResult{Count: uint(dataRepo.PeopleCount())}

@@ -9,7 +9,7 @@ import (
 
 // ----------------------------------------------------------------------------
 // The JSON we want to return to the UI when called
-type RuntimeImformationResult struct {
+type RuntimeInformationResult struct {
 	Allocated      uint `json:"allocated"`
 	TotalAllocated uint `json:"totalAllocated"`
 	Reserved       uint `json:"reserved"`
@@ -19,13 +19,13 @@ type RuntimeImformationResult struct {
 // ----------------------------------------------------------------------------
 // setupRuntimeInformationCallback binds the getMemoryStats callback to
 // the webview.
-// Returns runtime memory information as RuntimeImformationResult including:
+// Returns runtime memory information as RuntimeInformationResult including:
 // - Currently allocated memory in MB
 // - Total allocated memory since start in MB
 // - Reserved memory from OS in MB
 // - Number of garbage collections performed
 func setupRuntimeInformationCallback(w webview.WebView) {
-	w.Bind("getMemoryStats", func() RuntimeImformationResult {
+	w.Bind("getMemoryStats", func() RuntimeInformationResult {
 		var stats runtime.MemStats
 		runtime.ReadMemStats(&stats)
 
@@ -37,7 +37,7 @@ func setupRuntimeInformationCallback(w webview.WebView) {
 			fmt.Printf("Number of GC cycles   = %v\n", stats.NumGC)
 		}
 
-		return RuntimeImformationResult{
+		return RuntimeInformationResult{
 			Allocated:      uint(byteToMegabyte(stats.Alloc)),
 			TotalAllocated: uint(byteToMegabyte(stats.TotalAlloc)),
 			Reserved:       uint(byteToMegabyte(stats.Sys)),

@@ -55,6 +55,8 @@ func hadNoFlags() bool {
 	flag.Parse()
 
 	if *help {
+		// The * dereference is used to get the value of the bool flag
+		// See https://golang.org/pkg/flag/#Flag.Bool for more information
 		flag.PrintDefaults()
 		return false
 	}

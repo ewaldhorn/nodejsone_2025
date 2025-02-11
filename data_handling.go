@@ -11,7 +11,7 @@ import (
 // reads the person data from a local CSV file and adds it to the repo.
 // this emulates reading from a database, just with less overhead for the demo.
 //
-// caution: this sample contains no proper error handling
+// caution: for brevity, this sample contains no real error handling
 func loadDataFromCSV(file string, dataRepo *repo.DataRepo) {
 	lines := strings.Split(file, "\n")
 

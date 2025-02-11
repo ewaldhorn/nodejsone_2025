@@ -8,6 +8,7 @@ type IncrementResult struct {
 }
 
 // ----------------------------------------------------------------------------
+// we keep track of the click count on the Go side
 var currentCount = 0
 
 // ----------------------------------------------------------------------------
