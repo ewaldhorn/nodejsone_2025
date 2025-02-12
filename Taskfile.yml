@@ -8,28 +8,34 @@ vars:
 
 tasks:
   default:
+    desc: Lists available tasks
     cmds:
       - task --list-all
     silent: true
+  build:
+    desc: Builds a native executable
+    cmds:
+      - go build -ldflags="-s -w" -o boomerapp hello_there
+    silent: true
   buildui:
-    desc: "Builds the UI HTML file"
+    desc: Builds the UI HTML file
     dir: "{{.UI_DIR}}"
     cmds:
       - npm run build
     silent: true
   run:
-    desc: "Runs the desktop application, first builds the UI file"
+    desc: Runs the desktop application, first builds the UI file
     cmds:
       - task buildui
       - go run ./...
     silent: false
   runhelp:
-    desc: "Runs the desktop application with a '-help' flag"
+    desc: Runs the desktop application with a '-help' flag
     cmds:
       - go run ./... -help
     silent: true
   runversion:
-    desc: "Runs the desktop application with a '-version' flag"
+    desc: Runs the desktop application with a '-version' flag
     cmds:
       - go run ./... -version
     silent: true
